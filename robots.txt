@@ -1,0 +1,5 @@
+
+User-Agent: *
+Allow: /
+
+Sitemap: https://sadk.dev/sitemap.xml

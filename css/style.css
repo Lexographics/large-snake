@@ -1,0 +1,144 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    font-family: 'Kanit', sans-serif;
+}
+
+:root {
+    --primary-color: #ba0000;
+    --secondary-color: #7c0000;
+    --tertiary-color: #3e0000;
+
+    --background-color: #121212;
+    --text-color: #fff;
+
+    --hover-color: 	#f80000;
+
+    --black: #000000;
+
+}
+
+body {
+    background-color: var(--background-color);
+    width: 100%;
+    min-height: 100vh;
+}
+
+.bg {
+    z-index: -99;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(255,0,0);
+    background: linear-gradient(90deg, rgba(255,0,0,0.2) 0%, rgba(71,0,0,0.2) 25%, rgba(8,0,0,0.2) 50%, rgba(78,0,0,0.2) 75%, rgba(255,0,0,0.2) 100%);
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+    color: var(--text-color);
+}
+
+nav {
+    border: 1px solid var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 1rem 2rem;
+    
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0 0.25rem;
+    
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--hover-color);
+}
+
+
+
+.underline-hover-center {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.underline-hover-center::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--hover-color);
+    transition: 0.4s;
+}
+
+.underline-hover-center:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+
+.flex-fixed > * {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.column.center, .row.center {
+    justify-content: center;
+}
+.column.space-around, .row.space-around {
+    justify-content: space-around;
+}
+.column.space-evenly, .row.space-evenly {
+    justify-content: space-evenly;
+}
+
+.column.cross-center .row.cross-center {
+    align-items: center;
+}
+
+h1.center, h2.center, h2.center, h3.center, h4.center, h5.center, h6.center, p.center, span.center {
+    text-align: center;
+}
+
+#first-panel {
+    height: calc(100vh - 5rem);
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 1.5rem;
+    user-select: none;
+    background-color: var(--background-color);
+}
